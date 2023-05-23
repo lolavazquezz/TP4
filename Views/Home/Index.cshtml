@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Active Wear";
+}
+
+<a href='@Url.Action("SelectIndumentaria")'>Crear Indumentaria</a>
+<br>
+@foreach (string item in ViewBag.DicDias.Keys)
+{
+    <p>@item</p>
+    <img src="/calzas/@ViewBag.DicDias[item].Calza">
+    <img src="/camperas/@ViewBag.DicDias[item].Campera">
+    <img src="/remeras/@ViewBag.DicDias[item].Remera">
+    <img src="/tops/@ViewBag.DicDias[item].Top">
+    <img src="/zapas/@ViewBag.DicDias[item].Zapatilla">
+}

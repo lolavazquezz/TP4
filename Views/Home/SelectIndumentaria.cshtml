@@ -1,0 +1,39 @@
+<form method="post" action='@Url.Action("GuardarIndumentaria")'>
+    @foreach (string item in Dias.ListaDias)
+    {
+    @item
+    }
+    <input type="number" max="7" min="0" step="1" name="Dia"/>
+    <br>
+    @foreach (string item in Dias.ListaCalzas)
+    {
+    <img src="/calzas/@item">
+    }
+    <input type="number" max="5" min="0" step="1" name="Calza"/>
+    <br>
+    @foreach (string item in Dias.ListaCamperas)
+    {
+    <img src="/camperas/@item">
+    }
+    <input type="number" max="5" min="0" step="1" name="Campera"/>
+    <br>
+    @foreach (string item in Dias.ListaRemeras)
+    {
+    <img src="/remeras/@item">
+    }
+    <input type="number" max="5" min="0" step="1" name="Remera"/>
+    <br>
+    @foreach (string item in Dias.ListaTops)
+    {
+    <img src="/tops/@item">
+    }
+    <input type="number" max="5" min="0" step="1" name="Top"/>
+    <br>
+    @foreach (string item in Dias.ListaZapas)
+    {
+    <img src="/zapas/@item">
+    }
+    <input type="number" max="5" min="0" step="1" name="Zapatilla"/>
+    <br>
+    <input type="submit" value="Enviar"/>
+</form>
